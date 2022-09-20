@@ -1,5 +1,6 @@
 const app = require('./src/app')
-const PORT = process.env.PORT
+const port = process.env.PORT || 3000
+
 
 // Roda a api na porta 3000
-app.listen(PORT, () => console.log(`Server is running in port: ${PORT}`))
+app.listen(port, () => console.log(`Server is running in port: ${port}`))
