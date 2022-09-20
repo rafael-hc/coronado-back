@@ -72,7 +72,8 @@ const login = (req, res) => {
             // Login autorizado
             res.status(200).send({
                 message: "Authorized login",
-                token
+                token,
+                email: `${req.body.email}`
             })
         }
     })

@@ -2,7 +2,7 @@ const productSchema = require('../model/productSchema')
 
 // Busca todos os produtos
 const getAll = (req, res) => {
-    productSchema.find((e, products) => {
+    productSchema.find({},{__v: 0, details: {_id: 0}},(e, products) => {
         if (e) {
             res.status(500).send({ message: e })
         }
